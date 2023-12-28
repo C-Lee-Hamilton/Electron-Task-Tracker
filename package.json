@@ -1,0 +1,58 @@
+{
+  "name": "statusbar",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-store": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-build": "electron-builder --dir",
+    "electron-dist": "electron-builder",
+    "electron-start": "electron .",
+    "electron-builder": "electron-builder"
+  },
+  "electronBuilder": {
+    "files": [
+      "main.js",
+      "build/**",
+      "node_modules/**/*",
+      "public/**/*",
+      "src/**/*",
+      "package.json"
+    ],
+    "targets": {
+      "nsis": {
+        "arch": [
+          "x64"
+        ]
+      }
+    },
+    "asar": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^16.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}

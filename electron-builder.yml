@@ -1,0 +1,16 @@
+appId: com.yourcompany.yourappname
+productName: LookAtWhatICanDo
+directories:
+  output: dist
+files:
+  - main.js # Relative path to your main entry file
+  - build/**
+  - node_modules/**
+  - public/**/*
+  - src/**/*
+  - package.json
+  # Adjust this to match the actual name and location of your main entry file
+target:
+  - target: nsis
+    arch: x64
+asar: true
